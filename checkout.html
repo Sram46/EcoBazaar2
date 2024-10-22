@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Eco Bazaar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" class="logo" alt="Eco Bazaar Logo">
+        <h1>Checkout</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <section id="checkout-details">
+        <!-- Checkout details will be rendered here -->
+    </section>
+
+    <form id="payment-form">
+        <h2>Payment Details</h2>
+        <label for="card-number">Card Number:</label>
+        <input type="text" id="card-number" placeholder="Enter card number" required>
+        <label for="expiry-date">Expiry Date:</label>
+        <input type="text" id="expiry-date" placeholder="MM/YY" required>
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" placeholder="CVV" required>
+        <button type="submit">Place Order</button>
+    </form>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Eco Bazaar</h3>
+            <p>Eco Bazaar is your go-to platform for buying and selling used products, promoting sustainability and eco-friendly practices.</p>
+            <ul class="contact-info">
+                <li>Email: <a href="mailto:contact@ecobazaar.com">contact@ecobazaar.com</a></li>
+                <li>Phone: +1-234-567-890</li>
+            </ul>
+            <p>&copy; 2024 Eco Bazaar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>
