@@ -83,4 +83,25 @@ document.getElementById('product-form')?.addEventListener('submit', function(eve
     localStorage.setItem('checkoutItem', JSON.stringify({ title, price, quantity: 1 }));
     window.location.href = 'checkout.html';
   }
+  document.addEventListener('DOMContentLoaded', function () {
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // Check for saved user preference, if any, and apply it
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        document.body.classList.toggle('dark-mode', currentTheme === 'dark');
+        themeToggle.checked = currentTheme === 'dark';
+    }
+
+    // Add event listener to toggle the theme
+    themeToggle.addEventListener('change', function () {
+        if (this.checked) {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
   
